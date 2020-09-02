@@ -1,0 +1,29 @@
+<ol class="messages">
+    <li>Bienvenue sur ChatBoot</li>
+    <!-- <li class="ours">Hi, babe!</li>
+    <li class="ours">I have something for you.</li> -->
+    <li *ngFor="let msg of conversation"  [ngClass]="{'ours': msg.pos===0}"> {{msg.message}} </li>
+    
+
+
+
+</ol>
+
+<div class="row justify-content-center mt-auto">
+    <div class="col-5">
+        <div class="form-group">
+
+
+
+            <input type="text" class="form-control" [(ngModel)]="message" name="message" id="" aria-describedby="helpId" placeholder="Tappez message...">
+
+        </div>
+
+    </div>
+
+
+    <div class="col-1"> <a  class="btn btn-success" (click)="send();" role="button">Send</a></div>
+
+
+
+</div>
