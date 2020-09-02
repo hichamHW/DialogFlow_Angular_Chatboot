@@ -30,5 +30,6 @@
 .messages li.ours {
     align-self: flex-end;
     /* Stick to the right side, please! */
+    background-color: cadetblue;
     margin: 2px 0 2px 8px;
 }

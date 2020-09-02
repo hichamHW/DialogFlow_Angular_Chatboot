@@ -1,7 +1,9 @@
 <ol class="messages">
-    <li>Welcome to ChatBoot</li>
+    <li>Bienvenue sur ChatBoot</li>
     <!-- <li class="ours">Hi, babe!</li>
     <li class="ours">I have something for you.</li> -->
+    <li *ngFor="let msg of conversation"  [ngClass]="{'ours': msg.pos===0}"> {{msg.message}} </li>
+    
 
 
 
@@ -20,7 +22,7 @@
     </div>
 
 
-    <div class="col-1"> <a name="" id="" class="btn btn-success" (click)="send();" role="button">Send</a></div>
+    <div class="col-1"> <a  class="btn btn-success" (click)="send();" role="button">Send</a></div>
 
 
 

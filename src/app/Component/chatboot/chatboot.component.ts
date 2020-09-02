@@ -22,8 +22,19 @@ export class ChatbootComponent implements OnInit {
 
     // tslint:disable-next-line: triple-equals
     if (this.message != '') {
+      this.conversation.push({
+        message:this.message,
+        pos:0
+      })
       this.serviceChatBoot.getSpeech(this.message).subscribe(data => {
-        console.log(data);
+        this.conversation.push(
+          {
+            message:data.result.fulfillment.speech,
+            pos:1
+          });
+          console.log(this.conversation);
+          
+        this.message = '';
       });
 
 
